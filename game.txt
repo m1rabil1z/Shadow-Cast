@@ -1,0 +1,42 @@
+### Game Overview: Shadow Cast (Working Title)
+
+An interactive Mixed Reality (MR) spatial puzzle and 2D platformer for Meta Quest 3 built in Unity. Players manipulate 3D objects in physical space to cast shadow silhouettes onto a wall, transforming those 2D shadows into walkable platforms for a small character trying to reach a goal.
+
+---
+
+### The Core Premise & Gameplay Loop
+
+The game bridges 3D spatial reasoning with classic 2D platforming across two distinct phases:
+
+```
+[3D World: Place Objects in Light] ──> [Cast Shadows onto Wall] ──> [Freeze Shadows into 2D Colliders] ──> [Platform Blob to Goal]
+
+```
+
+1. **The Building Phase (3D Spatial Puzzle):**
+* A light source projects light toward a designated projection wall (either aligned to the user's physical wall or an anchored virtual game canvas).
+* The user uses relaxed, lap-level hand/wrist gestures to browse a palette of 3D virtual shapes (cubes, arches, wedges, spheres) and place or stack them in mid-air and atop scanned physical room furniture.
+* As objects are rotated, scaled, or repositioned in front of the light, their shadows project live onto the wall, forming bridges, stairs, ramps, and barriers over built-in shadow obstacles.
+
+
+2. **The Action Phase (2D Platforming):**
+* Once satisfied with the path, the player triggers a "Freeze" command.
+* The live projected shadows lock into static 2D physical colliders directly on the wall plane.
+* A 2D "blob" character spawns at the starting point. Using hand/finger microgestures (or a floating virtual controller), the player maneuvers the blob—running and jumping across the shadow silhouettes to navigate hazards and reach the goal post.
+* If a jump is impossible or the path fails, the player unfreezes the scene to tweak object positions and tries again.
+
+
+
+---
+
+### Key Pillars & Innovations
+
+* **Room-Agnostic Level Design:** While the game scans the player's physical environment, every level includes a curated set of virtual objects guaranteed to solve the puzzle independently. This ensures levels remain balanced, fun, and solvable whether played in a tiny bedroom or a large living room.
+* **Ergonomic, Seated Mixed Reality:** Designed specifically to eliminate "gorilla arm" fatigue. Players do not need to walk around their room or keep their arms raised. Using Quest 3's downward-canted cameras, the entire experience can be played from a relaxed wrist posture resting on a lap or armrest using point-and-pinch or microgestures.
+* **3D-to-2D Dimension Shift:** The puzzle mechanic relies on optical projection—a small object placed close to the light source creates a massive platform, while rotating a 3D prop reveals completely different 2D cross-sections.
+
+---
+
+### One-Minute Pitch Version
+
+> *"Think of it as a reverse shadow puppet show meets Mario. You sit in your room, pick up virtual 3D objects with subtle wrist gestures, and arrange them in front of a light beam. The shadows they cast onto your wall instantly solidify into 2D platforms. Once your shadow bridge is built, you freeze the light and steer a little 2D blob across the shadows to reach the goal. It combines the spatial magic of Mixed Reality with the precision of a 2D puzzle platformer—playable entirely from your couch."*
