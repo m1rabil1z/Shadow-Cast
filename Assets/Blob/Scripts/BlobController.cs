@@ -5,11 +5,11 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(SoftBlob))]
 public class BlobController : MonoBehaviour
 {
-    public float moveSpeed = 6f;
-    public float acceleration = 40f;
-    public float jumpSpeed = 11f;
-    public LayerMask groundMask;          
-    public float groundCheckExtra = 0.3f;
+    [SerializeField] private float moveSpeed = 6f;
+    [SerializeField] private float acceleration = 40f;
+    [SerializeField] private float jumpSpeed = 11f;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float groundCheckExtra = 0.3f;
 
     Rigidbody2D core;
     SoftBlob blob;
@@ -24,7 +24,7 @@ public class BlobController : MonoBehaviour
 
     void Update()
     {
-        var kb = Keyboard.current;
+        Keyboard kb = Keyboard.current;
         if (kb == null) return;
 
         input = 0f;
@@ -36,9 +36,9 @@ public class BlobController : MonoBehaviour
 
     bool Grounded()
     {
-        
+
         return Physics2D.CircleCast(blob.Centroid, 0.3f, Vector2.down,
-            blob.radius + groundCheckExtra - 0.3f, groundMask);
+            blob.Radius + groundCheckExtra - 0.3f, groundMask);
     }
 
     void FixedUpdate()
